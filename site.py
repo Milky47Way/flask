@@ -1,9 +1,16 @@
 from flask import Flask, render_template
 import os
 
+p_list = [("Віктор","Київ"),
+          ("Вололимир","Київ"),
+          ("Юлія","Одеса"),
+          ("Микола","Луцьк"),
+          ("Іван","Київ"),
+          ("Петро","Рівне")]
+
 
 def index():
-    return render_template("index.html")
+    return render_template("index.html", p_list=p_list, city="Київ")
 
 
 folder = os.getcwd()
